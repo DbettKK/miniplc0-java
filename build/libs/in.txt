@@ -1,0 +1,8 @@
+begin
+    var a=0;
+    var b;
+    a = 2*5*10;
+    b = -2;
+    print(-a);
+    print(b);
+end
