@@ -11,6 +11,8 @@ public class Token {
     private Pos startPos;
     private Pos endPos;
 
+    private Integer ident_value;
+
     public Token(TokenType tokenType, Object value, Pos startPos, Pos endPos) {
         this.tokenType = tokenType;
         this.value = value;
@@ -78,6 +80,14 @@ public class Token {
 
     public void setEndPos(Pos endPos) {
         this.endPos = endPos;
+    }
+
+    public Integer getIdent_value() {
+        return ident_value;
+    }
+
+    public void setIdent_value(Integer ident_value) {
+        this.ident_value = ident_value;
     }
 
     @Override

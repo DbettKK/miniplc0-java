@@ -39,12 +39,15 @@ public class App {
         var inputFileName = result.getString("input");
         var outputFileName = result.getString("output");
 
+        System.out.println(inputFileName + " " + outputFileName);
+
         InputStream input;
         if (inputFileName.equals("-")) {
             input = System.in;
         } else {
             try {
-                input = new FileInputStream(inputFileName);
+                //input = new FileInputStream(inputFileName);
+                input = new FileInputStream("D:\\大学\\大三上\\编译\\作业\\miniplc0-java\\build\\libs\\in.txt");
             } catch (FileNotFoundException e) {
                 System.err.println("Cannot find input file.");
                 e.printStackTrace();
@@ -58,7 +61,8 @@ public class App {
             output = System.out;
         } else {
             try {
-                output = new PrintStream(new FileOutputStream(outputFileName));
+                //output = new PrintStream(new FileOutputStream(outputFileName));
+                output = new PrintStream(new FileOutputStream("D:\\大学\\大三上\\编译\\作业\\miniplc0-java\\build\\libs\\out.txt"));
             } catch (FileNotFoundException e) {
                 System.err.println("Cannot open output file.");
                 e.printStackTrace();
